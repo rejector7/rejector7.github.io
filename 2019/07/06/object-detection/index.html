@@ -6,15 +6,32 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>object-detection | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="经典目标检测网络——算法详解目录1 目标检测任务介绍 2 R-CNN  2.1 模型架构 2.2 模型的优劣性  3 Fast R-CNN  3.1 模型架构 3.2 模型的优劣性  4 Faster R-CNN  4.1 模型架构 4.2 模型的优劣性  5 Yolo  5.1 模型架构 5.2 模型的优劣性  6 SSD  6.1 模型架构 6.2 模型的优劣性  1 目标检测任务介绍 目标检">
+<meta property="og:type" content="article">
+<meta property="og:title" content="object-detection">
+<meta property="og:url" content="http://yoursite.com/2019/07/06/object-detection/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="经典目标检测网络——算法详解目录1 目标检测任务介绍 2 R-CNN  2.1 模型架构 2.2 模型的优劣性  3 Fast R-CNN  3.1 模型架构 3.2 模型的优劣性  4 Faster R-CNN  4.1 模型架构 4.2 模型的优劣性  5 Yolo  5.1 模型架构 5.2 模型的优劣性  6 SSD  6.1 模型架构 6.2 模型的优劣性  1 目标检测任务介绍 目标检">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/R-CNN.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Fast_R-CNN.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Fast_R-CNN2.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Faster_R-CNN.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Faster_RPN.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Yolo.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Yolo2.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Yolo3.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Yolo4.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Yolo5.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/SSD.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/SSD2.png">
+<meta property="og:updated_time" content="2019-07-06T05:39:25.020Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="object-detection">
+<meta name="twitter:description" content="经典目标检测网络——算法详解目录1 目标检测任务介绍 2 R-CNN  2.1 模型架构 2.2 模型的优劣性  3 Fast R-CNN  3.1 模型架构 3.2 模型的优劣性  4 Faster R-CNN  4.1 模型架构 4.2 模型的优劣性  5 Yolo  5.1 模型架构 5.2 模型的优劣性  6 SSD  6.1 模型架构 6.2 模型的优劣性  1 目标检测任务介绍 目标检">
+<meta name="twitter:image" content="http://yoursite.com/2019/07/06/object-detection/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/R-CNN.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,386 +167,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-object-detection-practice-tutorial" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-object-detection" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/06/object-detection-practice-tutorial/">object_detection_practice_tutorial</a>
-    </h1>
-  
-
-        
-        <a href="/2019/07/06/object-detection-practice-tutorial/" class="archive-article-date">
-  	<time datetime="2019-07-06T05:40:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="经典目标检测网络——算法详解"><a href="#经典目标检测网络——算法详解" class="headerlink" title="经典目标检测网络——算法详解"></a>经典目标检测网络——算法详解</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p><a href="#1">1 目标检测任务介绍</a></p>
-<p><a href="#2">2 R-CNN</a></p>
-<ul>
-<li><a href="#2.1">2.1 模型架构</a></li>
-<li><a href="#2.2">2.2 模型的优劣性</a></li>
-</ul>
-<p><a href="#3">3 Fast R-CNN</a></p>
-<ul>
-<li><a href="#3.1">3.1 模型架构</a></li>
-<li><a href="#3.2">3.2 模型的优劣性</a></li>
-</ul>
-<p><a href="#4">4 Faster R-CNN</a></p>
-<ul>
-<li><a href="#4.1">4.1 模型架构</a></li>
-<li><a href="#4.2">4.2 模型的优劣性</a></li>
-</ul>
-<p><a href="#5">5 Yolo</a></p>
-<ul>
-<li><a href="#5.1">5.1 模型架构</a></li>
-<li><a href="#5.2">5.2 模型的优劣性</a></li>
-</ul>
-<p><a href="#6">6 SSD</a></p>
-<ul>
-<li><a href="#6.1">6.1 模型架构</a></li>
-<li><a href="#6.2">6.2 模型的优劣性</a></li>
-</ul>
-<h2 id="1-目标检测任务介绍"><a href="#1-目标检测任务介绍" class="headerlink" title="1 目标检测任务介绍 "></a><a id="1">1 目标检测任务介绍 </a></h2><p>目标检测（object detection）一般包含两个任务：</p>
-<ul>
-<li>目标识别：识别图像中物体的类别</li>
-<li>目标定位：确定图像中物体的位置，一般是由矩形框表示（x，y，w，h），（x，y）表示坐标，（w，h）表示大小</li>
-</ul>
-<h2 id="2-R-CNN"><a href="#2-R-CNN" class="headerlink" title="2 R-CNN"></a><a id="2">2 R-CNN</a></h2><p>论文连接：<a href="https://arxiv.org/pdf/1311.2524.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1311.2524.pdf</a></p>
-<h3 id="2-1-模型架构"><a href="#2-1-模型架构" class="headerlink" title="2.1 模型架构"></a><a id="2.1">2.1 模型架构</a></h3><p><strong>见图</strong></p>
-<p><img src="/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/R-CNN.png" alt="R-CNN架构图"></p>
-<p>整个流程以测试阶段为主，训练阶段所需的工作会额外说明。</p>
-<ul>
-<li><p>提取候选框（Selective Search）</p>
-</li>
-<li><p>输入一张图片，使用Selective search方法自底向上的从图片中提取出约2k个候选框</p>
-</li>
-<li><p>提取候选区域的特征（CNN）</p>
-<ul>
-<li>Warp操作：将候选框缩放为固定大小，227x227</li>
-<li>利用CNN从每个候选区域中提取出固定长度的特征向量，4096维，用于分类</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>训练<ul>
-<li>CNN首先在一个大型数据集（ILSVRC2012）上进行预训练</li>
-<li>针对候选区域图像进行微调</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>SVM分类器（二分类）</p>
-<ul>
-<li>使用SVM分类器，对每个提取出来的特征向量是否属于每个类别（不同的SVM分类器）进行评分。</li>
-<li>非极大值抑制：对于评分结果，计算候选区域之间的IoU（Intersection over Union），若两个候选区域之间的IoU大于某个阈值，则丢弃其中得分较低的候选区域。</li>
-<li>最终得出R-CNN预测的候选区域位置及其类别</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>训练<ul>
-<li>训练时采用某个IoU阈值，作为判断区域预测准确性的标准</li>
-<li>训练时是逐个类别对SVM进行优化的</li>
-</ul>
-</li>
-</ul>
-<p><strong>相关细节解释</strong></p>
-<ul>
-<li>Selective search是一种传统的region proposal method，但是R-CNN是区域候选方法无关的，采用其他方法同样适用，采用ss方便与其他同样采用ss的工作进行对比。</li>
-<li>提取区域特征的CNN是一个用于图像分类的网络，拥有固定的输入大小，227x227</li>
-<li>在实际计算中，CNN输出的是2000x4096矩阵，即 区域x特征向量维度。SVM权重矩阵是4096xN，N是类别数目。SVM输出2000xN矩阵，代表每个区域对应每个类别的评分。</li>
-<li>IoU：Intersection/Union：表示两个候选区域面积的交集/并集，用来衡量两个区域的重叠率。</li>
-<li>测试的评估标准：预测的候选区域与ground truth boxes之间的IoU大于某个阈值，并且类别准确，则视为预测正确</li>
-</ul>
-<h3 id="2-2-模型的优劣性"><a href="#2-2-模型的优劣性" class="headerlink" title="2.2 模型的优劣性"></a><a id="2.2">2.2 模型的优劣性</a></h3><ul>
-<li><p>优点</p>
-<ul>
-<li>用于提取区域特征的CNN是所有类别共享的：共享CNN，使得计算候选区域的特征所需的时间得以在所有类别之间均摊</li>
-<li>相比于以前的方法，特征向量相对是低维的，4k vs 360k</li>
-<li>易于扩展：R-CNN可以容易的扩展成识别更多类别的模型，并且不需要消耗太多的时间，当然这也是相对而言</li>
-</ul>
-</li>
-<li><p>缺点</p>
-<ul>
-<li><p>训练时消耗大量时间和计算空间。</p>
-<p>类别特定（class-specific）的计算量庞大：区域特征向量与SVM分类器之间的点积运算、非极大值抑制。所谓类别特定，是指不同类别之间的计算不能共享。</p>
-</li>
-<li><p>训练时多阶段的。微调CNN、训练SVM、训练regressor（回归器）</p>
-</li>
-<li><p>应用和测试时检测速度慢</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-Fast-R-CNN"><a href="#3-Fast-R-CNN" class="headerlink" title="3 Fast R-CNN"></a><a id="3">3 Fast R-CNN</a></h2><p>论文链接：<a href="https://arxiv.org/pdf/1504.08083.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1504.08083.pdf</a></p>
-<h3 id="3-1-模型架构"><a href="#3-1-模型架构" class="headerlink" title="3.1 模型架构"></a><a id="3.1">3.1 模型架构</a></h3><p><strong>论文图</strong></p>
-<p><img src="/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Fast_R-CNN.png" alt="Fast R-CNN架构图"></p>
-<p><em>上图没有问题，但是有点难以理解</em></p>
-<p><em>结合以下图架构进行描述</em></p>
-<p><img src="/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Fast_R-CNN2.png" alt="Fast R-CNN架构图2"></p>
-<ul>
-<li>从图片中使用Selective search生成候选区域，由四元元组表示</li>
-<li>将图片输入全卷积网络，生成整体图片的特征图</li>
-<li>由区域位置计算出区域在整体特征图中对应的矩形窗口，即为RoI</li>
-<li>RoI Pooling层+FC层：每个RoI输出固定大小的特征向量，用于分类与回归</li>
-<li>特征向量通过两路并列的分支<ul>
-<li>FC+softmax：输出分类概率，该区域属于每个分类的概率，K+1个值，将背景也视为一个类别</li>
-<li>FC+bbox 回归层：输出每个类别的b-box的回归偏移量（相对原始区域包围框），4K，每个类别的bbox由四个实数表示</li>
-</ul>
-</li>
-</ul>
-<p><strong>RoI池化层</strong></p>
-<ul>
-<li>RoI池化层使用最大池化将RoI的特征图转化为一个固定大小的特征图，HxW，论文中为7x7<ul>
-<li>输入：RoI</li>
-<li>将hxw的RoI窗口划分为HxW的网格，其中每个网格（子窗口）大小为h/H x w/W</li>
-<li>将每个网格中的值使用最大池化得出每个网格的最大值（一个值），HxW个网格的输出值组成HxW的特征图</li>
-<li>输出：大小为HxW的特征图</li>
-</ul>
-</li>
-</ul>
-<p><strong>相关细节解释</strong></p>
-<ul>
-<li>全卷积网络：指只有卷积层和池化层，不包含全连接层</li>
-<li>RoI：Region of Interest，论文中是指全卷积网络的输出特征图中的一个矩形窗口，由（r，c，h，w）元组定义，对应Region Proposal</li>
-</ul>
-<p><strong>模型训练</strong></p>
-<ul>
-<li>FCN部分使用预训练网络进行初始化</li>
-<li>微调<ul>
-<li>Mini-batch从N张图片中选取各R/N个RoIs，替代从不同的R张图片中选取一个RoI。同一张图片的RoIs能够共享在FCN阶段的计算</li>
-<li>Fast R-CNN使用单阶段同时训练分类器和回归器</li>
-<li>多任务的损失函数。分类和回归两者结合，实验时采用的权重比例为1:1</li>
-<li>SGD的超参数。分类和回归两个分支中FC使用高斯分布初始化</li>
-</ul>
-</li>
-</ul>
-<h3 id="3-2-模型的优劣性"><a href="#3-2-模型的优劣性" class="headerlink" title="3.2 模型的优劣性"></a><a id="3.2">3.2 模型的优劣性</a></h3><ul>
-<li>优点<ul>
-<li>单阶段，端到端的训练与测试。</li>
-<li>多任务的损失函数提高了准确率</li>
-<li>共享同一张图片的不同候选框的特征向量的计算</li>
-</ul>
-</li>
-<li>缺点<ul>
-<li>生成候选框仍使用ss，速度慢</li>
-</ul>
-</li>
-</ul>
-<h2 id="4-Faster-R-CNN"><a href="#4-Faster-R-CNN" class="headerlink" title="4 Faster R-CNN"></a><a id="4">4 Faster R-CNN</a></h2><p>论文链接：<a href="https://arxiv.org/pdf/1506.01497.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1506.01497.pdf</a></p>
-<h3 id="4-1-模型架构"><a href="#4-1-模型架构" class="headerlink" title="4.1 模型架构"></a><a id="4.1">4.1 模型架构</a></h3><p><strong>见图</strong></p>
-<p><img src="/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Faster_R-CNN.png" alt="Faster R-CNN架构图"></p>
-<p><em>Faster R-CNN主要由两个模块组成</em></p>
-<ul>
-<li>RPN（Region Proposal Network）：一个深度全卷积网络，用来提议候选区域，替代之前的ss</li>
-<li>Fast R-CNN：使用RPN的候选区域进行检测</li>
-</ul>
-<p><strong>算法流程</strong></p>
-<ul>
-<li>输入图片</li>
-<li>使用CNN提取图片的整体特征图（这部分CNN是RPN和Fast R-CNN共用的）</li>
-<li>RPN从特征图中提取出候选区域(RP)</li>
-<li>RP送入Fast R-CNN进行分类与回归（与Fast R-CNN相同）<ul>
-<li>使用RoI池化层+FC，从RP提取出特征向量</li>
-<li>两路分支进行分类与回归</li>
-</ul>
-</li>
-</ul>
-<p><strong>RPN(Region Proposal Network)</strong></p>
-<p><em>RPN是一个全卷积网络</em></p>
-<p><em>见图</em></p>
-<p><img src="/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Faster_RPN.png" alt="RPN"></p>
-<p><em>流程</em></p>
-<ul>
-<li>在特征图上使用nxn的滑动窗口，将滑窗对应的部分特征图用过中间层（卷积层）映射为256d的特征向量</li>
-<li>使用特征向量进行分类与回归</li>
-</ul>
-<p><em>Anchor</em></p>
-<ul>
-<li>Anchor的含义本指滑窗的中心点（锚点），论文中也指：根据滑窗位置，在原图像中提出的候选区域。</li>
-<li>对于每个滑窗，滑窗中心在原图像中有对应的位置。根据不同的大小，不同的纵横比，可以预测不同的矩形，即多个候选区域，个数记为k。那么WxH的特征图，总共有WHk个anchor，用于回归。</li>
-</ul>
-<p><em>RPN的训练</em></p>
-<ul>
-<li>回归损失与分类损失结合</li>
-<li>回归损失由RPN提出的RP与Ground truth boxes之间的差异产生</li>
-</ul>
-<p><em>Faster R-CNN的训练（交替训练）</em></p>
-<ul>
-<li>由RPN的分类与回归损失，训练RPN</li>
-<li>固定RPN，由RPN提取的RP，训练Fast R-CNN</li>
-<li>用Fast R-CNN初始化RPN中 两者共用的卷积层</li>
-<li>迭代执行上述步骤，直到训练结束（测试结果没有明显提升时）</li>
-</ul>
-<h3 id="4-2-模型的优劣性"><a href="#4-2-模型的优劣性" class="headerlink" title="4.2 模型的优劣性"></a><a id="4.2">4.2 模型的优劣性</a></h3><ul>
-<li>优点<ul>
-<li>使用RPN提议候选区域，替代ss，加快速度</li>
-</ul>
-</li>
-<li>缺点<ul>
-<li>需要对两个网络交替训练，比较复杂</li>
-</ul>
-</li>
-</ul>
-<h2 id="5-Yolo"><a href="#5-Yolo" class="headerlink" title="5 Yolo"></a><a id="5">5 Yolo</a></h2><p>论文链接：<a href="https://arxiv.org/pdf/1506.02640.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1506.02640.pdf</a></p>
-<h3 id="5-1-模型架构"><a href="#5-1-模型架构" class="headerlink" title="5.1 模型架构"></a><a id="5.1">5.1 模型架构</a></h3><p><strong>流程图</strong></p>
-<p><img src="/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Yolo.png" alt="Yolo"></p>
-<p><strong>算法流程</strong></p>
-<ul>
-<li>输入图片</li>
-<li>将图片分割成SxS的网格，如果某个物体的中心位于某个网格内，那么该网格负责检测该物体</li>
-<li>使用CNN，对每个网格进行预测<ul>
-<li>预测B个包围盒的位置，并且给出这B个包围盒的置信度（confidence score）<ul>
-<li>confidence score：<img src="/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Yolo2.png" alt="Yolo2"></li>
-</ul>
-</li>
-<li>预测C个类别的条件概率：网格中有物体的条件下，该物体时特定类别的概率<ul>
-<li>特定类别的条件概率：<img src="/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Yolo3.png" alt="Yolo3"></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>这些预测输出将会编码为SxSx（B*5+C）的张量</li>
-<li>将包围盒的预测分数和网格的特定类别的条件概率相乘，得到包围盒中特定类别的概率<ul>
-<li>特定类别的概率：<img src="/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Yolo4.png" alt="Yolo4"></li>
-</ul>
-</li>
-<li>最后通过选取每个网格对应的所有包围盒中最大的类别概率，设定阈值，多个网格非极大值抑制等方法，选取最终的预测结果</li>
-</ul>
-<p><strong>相关细节</strong></p>
-<ul>
-<li>每个包围盒预测是五元组：x，y，w，h，confidence<ul>
-<li>（x，y）代表包围盒中心相对于网格边框的偏移，而非整体图片的偏移，这样才方便在一定范围内对权重参数进行限制</li>
-</ul>
-</li>
-<li>CNN的预测结果的张量为：SxSx（B*5+C）<ul>
-<li>针对每个网格，预测B个包围框，每个包围框五个参数，同时针对每个网格，预测C个类别条件概率</li>
-</ul>
-</li>
-</ul>
-<p><strong>架构图</strong></p>
-<p><img src="/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Yolo5.png" alt="Yolo5"></p>
-<ul>
-<li>网络由24个卷积层和2个FC层组成。前者用来提取图片特征、后者用来分类与回归</li>
-<li>采用1x1卷积层进行降维</li>
-</ul>
-<h3 id="5-2-模型的优劣性"><a href="#5-2-模型的优劣性" class="headerlink" title="5.2 模型的优劣性"></a><a id="5.2">5.2 模型的优劣性</a></h3><ul>
-<li>优点：<ul>
-<li>跳出R-CNN系列的双任务（物体类别识别、物体位置确定）思维，实现单任务模型<ul>
-<li>不再使用ss或RPN等Region Proposal的方法，而是将位置信息和类别信息同时编码在网络输出中</li>
-<li>论文名字，You only look once的含义正源于此，只需要利用一个网络，在一张图上进行处理</li>
-</ul>
-</li>
-<li>在保证一定准确率的前提下，极大的提升了算法的速度，达到实时预测的速度要求</li>
-</ul>
-</li>
-<li>缺点<ul>
-<li>相比于Faster R-CNN等模型，由于不使用RPN等方法显示的提取候选框，位置精度降低了，检测准确率也有所降低，当然这是一个trade-off</li>
-</ul>
-</li>
-</ul>
-<h2 id="6-SSD"><a href="#6-SSD" class="headerlink" title="6 SSD"></a><a id="2">6 SSD</a></h2><p>论文链接：<a href="https://arxiv.org/pdf/1512.02325.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1512.02325.pdf</a></p>
-<h3 id="6-1-模型架构"><a href="#6-1-模型架构" class="headerlink" title="6.1 模型架构"></a><a id="6.1">6.1 模型架构</a></h3><p><strong>算法图示</strong></p>
-<p><img src="/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/SSD.png" alt="SSD"></p>
-<ul>
-<li>（a）SSD训练时只需要输入图片和Ground Truth boxes，不需要包围框的类别标签</li>
-<li>（b）和（c）是两个不同大小的特征图</li>
-</ul>
-<p><strong>算法流程</strong></p>
-<ul>
-<li>输入图片</li>
-<li>利用CNN产生不同规模的特征图</li>
-<li>在特征图中的每个位置，生成一些默认的boxes，具有不同大小和纵横比</li>
-<li>对每个默认的Box，使用CNN，预测位置偏移量和所有类别的confidence（见图）</li>
-<li>根据confidence大小，使用非极大值抑制，提出最后的预测结果</li>
-</ul>
-<p><strong>训练阶段</strong></p>
-<ul>
-<li>将默认box和GT boxes进行比较，设计定位损失函数</li>
-<li>使用定位损失和confidence损失结合</li>
-</ul>
-<p><strong>SSD和Yolo的架构图</strong></p>
-<p><img src="/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/SSD2.png" alt="SSD2"></p>
-<p>SSD中，将Yolo的分类FC层去掉，换成Extra Feature Layers</p>
-<ul>
-<li>实现了多尺度特征图：利用不同的卷积层，得到不同尺度的特征图，实现多尺度检测</li>
-<li>利用卷积层来产生预测结果，而不是Yolo中的FC</li>
-<li>特征图上的默认Box，类似于Faster R-CNN的Anchor，不同的是，这里的默认box在不同尺度上检测</li>
-</ul>
-<h3 id="6-2-模型的优劣性"><a href="#6-2-模型的优劣性" class="headerlink" title="6.2 模型的优劣性"></a><a id="6.2">6.2 模型的优劣性</a></h3><ul>
-<li>优点<ul>
-<li>基本满足实时目标检测任务在速度和精度上的需求<ul>
-<li>检测精度几乎与Faster R-CNN相同</li>
-<li>检测速度超过Yolo</li>
-</ul>
-</li>
-<li>由于多尺度的检测网络，增加了多尺度的鲁棒性，当然这也是精度增加的重要原因</li>
-</ul>
-</li>
-<li>缺点<ul>
-<li>见近两年最新论文</li>
-</ul>
-</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/06/object-detection-practice-tutorial/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-object-detection" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/06/object-detection/">object-detection</a>
+    <h1 class="article-title" itemprop="name">
+      object-detection
     </h1>
   
 
@@ -854,6 +499,27 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -861,16 +527,84 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/06/object-detection/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/06/object-detection/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2019/07/06/object-detection-practice-tutorial/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          object_detection_practice_tutorial
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/06/23/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -890,83 +624,14 @@
 
 
 
-
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/06/23/hello-world/">Hello World</a>
-    </h1>
   
 
-        
-        <a href="/2019/06/23/hello-world/" class="archive-article-date">
-  	<time datetime="2019-06-23T14:04:53.685Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/06/23/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+  
 
   
+
   
 
 
@@ -989,8 +654,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
