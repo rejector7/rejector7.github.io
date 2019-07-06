@@ -15,23 +15,23 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="经典目标检测网络——算法详解目录1 目标检测任务介绍 2 R-CNN  2.1 模型架构 2.2 模型的优劣性  3 Fast R-CNN  3.1 模型架构 3.2 模型的优劣性  4 Faster R-CNN  4.1 模型架构 4.2 模型的优劣性  5 Yolo  5.1 模型架构 5.2 模型的优劣性  6 SSD  6.1 模型架构 6.2 模型的优劣性  1 目标检测任务介绍 目标检">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/MyHexo/source/_posts/object-detection/R-CNN.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/MyHexo/source/_posts/object-detection/Fast_R-CNN.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/MyHexo/source/_posts/object-detection/Fast_R-CNN2.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/MyHexo/source/_posts/object-detection/Faster_R-CNN.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/MyHexo/source/_posts/object-detection/Faster_RPN.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/MyHexo/source/_posts/object-detection/Yolo.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/MyHexo/source/_posts/object-detection/Yolo2.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/MyHexo/source/_posts/object-detection/Yolo3.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/MyHexo/source/_posts/object-detection/Yolo4.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/MyHexo/source/_posts/object-detection/Yolo5.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/MyHexo/source/_posts/object-detection/SSD.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/MyHexo/source/_posts/object-detection/SSD2.png">
-<meta property="og:updated_time" content="2019-07-06T05:47:44.157Z">
+<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/R-CNN.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/Fast_R-CNN.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/Fast_R-CNN2.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/Faster_R-CNN.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/Faster_RPN.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/Yolo.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/Yolo2.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/Yolo3.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/Yolo4.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/Yolo5.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/SSD.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection/SSD2.png">
+<meta property="og:updated_time" content="2019-07-06T05:54:29.721Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="object-detection">
 <meta name="twitter:description" content="经典目标检测网络——算法详解目录1 目标检测任务介绍 2 R-CNN  2.1 模型架构 2.2 模型的优劣性  3 Fast R-CNN  3.1 模型架构 3.2 模型的优劣性  4 Faster R-CNN  4.1 模型架构 4.2 模型的优劣性  5 Yolo  5.1 模型架构 5.2 模型的优劣性  6 SSD  6.1 模型架构 6.2 模型的优劣性  1 目标检测任务介绍 目标检">
-<meta name="twitter:image" content="http://yoursite.com/2019/07/06/object-detection/MyHexo/source/_posts/object-detection/R-CNN.png">
+<meta name="twitter:image" content="http://yoursite.com/2019/07/06/object-detection/R-CNN.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -220,7 +220,7 @@
 </ul>
 <h2 id="2-R-CNN"><a href="#2-R-CNN" class="headerlink" title="2 R-CNN"></a><a id="2">2 R-CNN</a></h2><p>论文连接：<a href="https://arxiv.org/pdf/1311.2524.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1311.2524.pdf</a></p>
 <h3 id="2-1-模型架构"><a href="#2-1-模型架构" class="headerlink" title="2.1 模型架构"></a><a id="2.1">2.1 模型架构</a></h3><p><strong>见图</strong></p>
-<p><img src="/2019/07/06/object-detection/MyHexo/source/_posts/object-detection/R-CNN.png" alt="R-CNN架构图"></p>
+<p><img src="/2019/07/06/object-detection/R-CNN.png" alt="R-CNN架构图"></p>
 <p>整个流程以测试阶段为主，训练阶段所需的工作会额外说明。</p>
 <ul>
 <li><p>提取候选框（Selective Search）</p>
@@ -287,10 +287,10 @@
 </ul>
 <h2 id="3-Fast-R-CNN"><a href="#3-Fast-R-CNN" class="headerlink" title="3 Fast R-CNN"></a><a id="3">3 Fast R-CNN</a></h2><p>论文链接：<a href="https://arxiv.org/pdf/1504.08083.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1504.08083.pdf</a></p>
 <h3 id="3-1-模型架构"><a href="#3-1-模型架构" class="headerlink" title="3.1 模型架构"></a><a id="3.1">3.1 模型架构</a></h3><p><strong>论文图</strong></p>
-<p><img src="/2019/07/06/object-detection/MyHexo/source/_posts/object-detection/Fast_R-CNN.png" alt="Fast R-CNN架构图"></p>
+<p><img src="/2019/07/06/object-detection/Fast_R-CNN.png" alt="Fast R-CNN架构图"></p>
 <p><em>上图没有问题，但是有点难以理解</em></p>
 <p><em>结合以下图架构进行描述</em></p>
-<p><img src="/2019/07/06/object-detection/MyHexo/source/_posts/object-detection/Fast_R-CNN2.png" alt="Fast R-CNN架构图2"></p>
+<p><img src="/2019/07/06/object-detection/Fast_R-CNN2.png" alt="Fast R-CNN架构图2"></p>
 <ul>
 <li>从图片中使用Selective search生成候选区域，由四元元组表示</li>
 <li>将图片输入全卷积网络，生成整体图片的特征图</li>
@@ -342,7 +342,7 @@
 </ul>
 <h2 id="4-Faster-R-CNN"><a href="#4-Faster-R-CNN" class="headerlink" title="4 Faster R-CNN"></a><a id="4">4 Faster R-CNN</a></h2><p>论文链接：<a href="https://arxiv.org/pdf/1506.01497.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1506.01497.pdf</a></p>
 <h3 id="4-1-模型架构"><a href="#4-1-模型架构" class="headerlink" title="4.1 模型架构"></a><a id="4.1">4.1 模型架构</a></h3><p><strong>见图</strong></p>
-<p><img src="/2019/07/06/object-detection/MyHexo/source/_posts/object-detection/Faster_R-CNN.png" alt="Faster R-CNN架构图"></p>
+<p><img src="/2019/07/06/object-detection/Faster_R-CNN.png" alt="Faster R-CNN架构图"></p>
 <p><em>Faster R-CNN主要由两个模块组成</em></p>
 <ul>
 <li>RPN（Region Proposal Network）：一个深度全卷积网络，用来提议候选区域，替代之前的ss</li>
@@ -362,7 +362,7 @@
 <p><strong>RPN(Region Proposal Network)</strong></p>
 <p><em>RPN是一个全卷积网络</em></p>
 <p><em>见图</em></p>
-<p><img src="/2019/07/06/object-detection/MyHexo/source/_posts/object-detection/Faster_RPN.png" alt="RPN"></p>
+<p><img src="/2019/07/06/object-detection/Faster_RPN.png" alt="RPN"></p>
 <p><em>流程</em></p>
 <ul>
 <li>在特征图上使用nxn的滑动窗口，将滑窗对应的部分特征图用过中间层（卷积层）映射为256d的特征向量</li>
@@ -397,25 +397,25 @@
 </ul>
 <h2 id="5-Yolo"><a href="#5-Yolo" class="headerlink" title="5 Yolo"></a><a id="5">5 Yolo</a></h2><p>论文链接：<a href="https://arxiv.org/pdf/1506.02640.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1506.02640.pdf</a></p>
 <h3 id="5-1-模型架构"><a href="#5-1-模型架构" class="headerlink" title="5.1 模型架构"></a><a id="5.1">5.1 模型架构</a></h3><p><strong>流程图</strong></p>
-<p><img src="/2019/07/06/object-detection/MyHexo/source/_posts/object-detection/Yolo.png" alt="Yolo"></p>
+<p><img src="/2019/07/06/object-detection/Yolo.png" alt="Yolo"></p>
 <p><strong>算法流程</strong></p>
 <ul>
 <li>输入图片</li>
 <li>将图片分割成SxS的网格，如果某个物体的中心位于某个网格内，那么该网格负责检测该物体</li>
 <li>使用CNN，对每个网格进行预测<ul>
 <li>预测B个包围盒的位置，并且给出这B个包围盒的置信度（confidence score）<ul>
-<li>confidence score：<img src="/2019/07/06/object-detection/MyHexo/source/_posts/object-detection/Yolo2.png" alt="Yolo2"></li>
+<li>confidence score：<img src="/2019/07/06/object-detection/Yolo2.png" alt="Yolo2"></li>
 </ul>
 </li>
 <li>预测C个类别的条件概率：网格中有物体的条件下，该物体时特定类别的概率<ul>
-<li>特定类别的条件概率：<img src="/2019/07/06/object-detection/MyHexo/source/_posts/object-detection/Yolo3.png" alt="Yolo3"></li>
+<li>特定类别的条件概率：<img src="/2019/07/06/object-detection/Yolo3.png" alt="Yolo3"></li>
 </ul>
 </li>
 </ul>
 </li>
 <li>这些预测输出将会编码为SxSx（B*5+C）的张量</li>
 <li>将包围盒的预测分数和网格的特定类别的条件概率相乘，得到包围盒中特定类别的概率<ul>
-<li>特定类别的概率：<img src="/2019/07/06/object-detection/MyHexo/source/_posts/object-detection/Yolo4.png" alt="Yolo4"></li>
+<li>特定类别的概率：<img src="/2019/07/06/object-detection/Yolo4.png" alt="Yolo4"></li>
 </ul>
 </li>
 <li>最后通过选取每个网格对应的所有包围盒中最大的类别概率，设定阈值，多个网格非极大值抑制等方法，选取最终的预测结果</li>
@@ -432,7 +432,7 @@
 </li>
 </ul>
 <p><strong>架构图</strong></p>
-<p><img src="/2019/07/06/object-detection/MyHexo/source/_posts/object-detection/Yolo5.png" alt="Yolo5"></p>
+<p><img src="/2019/07/06/object-detection/Yolo5.png" alt="Yolo5"></p>
 <ul>
 <li>网络由24个卷积层和2个FC层组成。前者用来提取图片特征、后者用来分类与回归</li>
 <li>采用1x1卷积层进行降维</li>
@@ -454,7 +454,7 @@
 </ul>
 <h2 id="6-SSD"><a href="#6-SSD" class="headerlink" title="6 SSD"></a><a id="2">6 SSD</a></h2><p>论文链接：<a href="https://arxiv.org/pdf/1512.02325.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1512.02325.pdf</a></p>
 <h3 id="6-1-模型架构"><a href="#6-1-模型架构" class="headerlink" title="6.1 模型架构"></a><a id="6.1">6.1 模型架构</a></h3><p><strong>算法图示</strong></p>
-<p><img src="/2019/07/06/object-detection/MyHexo/source/_posts/object-detection/SSD.png" alt="SSD"></p>
+<p><img src="/2019/07/06/object-detection/SSD.png" alt="SSD"></p>
 <ul>
 <li>（a）SSD训练时只需要输入图片和Ground Truth boxes，不需要包围框的类别标签</li>
 <li>（b）和（c）是两个不同大小的特征图</li>
@@ -473,7 +473,7 @@
 <li>使用定位损失和confidence损失结合</li>
 </ul>
 <p><strong>SSD和Yolo的架构图</strong></p>
-<p><img src="/2019/07/06/object-detection/MyHexo/source/_posts/object-detection/SSD2.png" alt="SSD2"></p>
+<p><img src="/2019/07/06/object-detection/SSD2.png" alt="SSD2"></p>
 <p>SSD中，将Yolo的分类FC层去掉，换成Extra Feature Layers</p>
 <ul>
 <li>实现了多尺度特征图：利用不同的卷积层，得到不同尺度的特征图，实现多尺度检测</li>
