@@ -8,30 +8,21 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>object_detection_practice_tutorial | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="经典目标检测网络——算法详解目录1 目标检测任务介绍 2 R-CNN  2.1 模型架构 2.2 模型的优劣性  3 Fast R-CNN  3.1 模型架构 3.2 模型的优劣性  4 Faster R-CNN  4.1 模型架构 4.2 模型的优劣性  5 Yolo  5.1 模型架构 5.2 模型的优劣性  6 SSD  6.1 模型架构 6.2 模型的优劣性  1 目标检测任务介绍 目标检">
+  <meta name="description" content="经典目标检测网络——实践教程目录经典目标检测模型主要包括：R-CNN、Fast R-CNN、Faster R-CNN、Yolo（Yolo、Yolov2、Yolov3）、SSD 由于R-CNN、Fast R-CNN、Faster R-CNN同属一个系列，而前两者是多阶段的模型，已经弃用。因此本文将主要介绍Faster R-CNN、Yolo、SSD三个模型的使用过程与结果 为了对三个模型的效果进行展示">
 <meta property="og:type" content="article">
 <meta property="og:title" content="object_detection_practice_tutorial">
 <meta property="og:url" content="http://yoursite.com/2019/07/06/object-detection-practice-tutorial/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="经典目标检测网络——算法详解目录1 目标检测任务介绍 2 R-CNN  2.1 模型架构 2.2 模型的优劣性  3 Fast R-CNN  3.1 模型架构 3.2 模型的优劣性  4 Faster R-CNN  4.1 模型架构 4.2 模型的优劣性  5 Yolo  5.1 模型架构 5.2 模型的优劣性  6 SSD  6.1 模型架构 6.2 模型的优劣性  1 目标检测任务介绍 目标检">
+<meta property="og:description" content="经典目标检测网络——实践教程目录经典目标检测模型主要包括：R-CNN、Fast R-CNN、Faster R-CNN、Yolo（Yolo、Yolov2、Yolov3）、SSD 由于R-CNN、Fast R-CNN、Faster R-CNN同属一个系列，而前两者是多阶段的模型，已经弃用。因此本文将主要介绍Faster R-CNN、Yolo、SSD三个模型的使用过程与结果 为了对三个模型的效果进行展示">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/R-CNN.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Fast_R-CNN.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Fast_R-CNN2.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Faster_R-CNN.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Faster_RPN.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Yolo.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Yolo2.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Yolo3.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Yolo4.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Yolo5.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/SSD.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/SSD2.png">
-<meta property="og:updated_time" content="2019-07-06T05:40:41.275Z">
+<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection-practice-tutorial/MyHexo/source/_posts/object_detection_practice_tutorial/cat.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection-practice-tutorial/MyHexo/source/_posts/object_detection_practice_tutorial/car.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/06/object-detection-practice-tutorial/MyHexo/source/_posts/object_detection_practice_tutorial/person.png">
+<meta property="og:updated_time" content="2019-07-06T05:48:43.073Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="object_detection_practice_tutorial">
-<meta name="twitter:description" content="经典目标检测网络——算法详解目录1 目标检测任务介绍 2 R-CNN  2.1 模型架构 2.2 模型的优劣性  3 Fast R-CNN  3.1 模型架构 3.2 模型的优劣性  4 Faster R-CNN  4.1 模型架构 4.2 模型的优劣性  5 Yolo  5.1 模型架构 5.2 模型的优劣性  6 SSD  6.1 模型架构 6.2 模型的优劣性  1 目标检测任务介绍 目标检">
-<meta name="twitter:image" content="http://yoursite.com/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/R-CNN.png">
+<meta name="twitter:description" content="经典目标检测网络——实践教程目录经典目标检测模型主要包括：R-CNN、Fast R-CNN、Faster R-CNN、Yolo（Yolo、Yolov2、Yolov3）、SSD 由于R-CNN、Fast R-CNN、Faster R-CNN同属一个系列，而前两者是多阶段的模型，已经弃用。因此本文将主要介绍Faster R-CNN、Yolo、SSD三个模型的使用过程与结果 为了对三个模型的效果进行展示">
+<meta name="twitter:image" content="http://yoursite.com/2019/07/06/object-detection-practice-tutorial/MyHexo/source/_posts/object_detection_practice_tutorial/cat.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -187,313 +178,60 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="经典目标检测网络——算法详解"><a href="#经典目标检测网络——算法详解" class="headerlink" title="经典目标检测网络——算法详解"></a>经典目标检测网络——算法详解</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p><a href="#1">1 目标检测任务介绍</a></p>
-<p><a href="#2">2 R-CNN</a></p>
+        <h1 id="经典目标检测网络——实践教程"><a href="#经典目标检测网络——实践教程" class="headerlink" title="经典目标检测网络——实践教程"></a>经典目标检测网络——实践教程</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p><strong>经典目标检测模型主要包括：R-CNN、Fast R-CNN、Faster R-CNN、Yolo（Yolo、Yolov2、Yolov3）、SSD</strong></p>
+<p><em>由于R-CNN、Fast R-CNN、Faster R-CNN同属一个系列，而前两者是多阶段的模型，已经弃用。因此本文将主要介绍Faster R-CNN、Yolo、SSD三个模型的使用过程与结果</em></p>
+<p><em>为了对三个模型的效果进行展示，将使用同样的图片进行测试</em></p>
 <ul>
-<li><a href="#2.1">2.1 模型架构</a></li>
-<li><a href="#2.2">2.2 模型的优劣性</a></li>
+<li>本文统一使用docker搭建环境，不同os的下载与安装自由发挥</li>
+<li>docker操作自由发挥</li>
 </ul>
-<p><a href="#3">3 Fast R-CNN</a></p>
+<h3 id="1-Faster-R-CNN模型的使用"><a href="#1-Faster-R-CNN模型的使用" class="headerlink" title="1 Faster R-CNN模型的使用"></a>1 Faster R-CNN模型的使用</h3><p>Github代码链接：<a href="https://github.com/Jeozhao/Keras-FasterRCNN" target="_blank" rel="noopener">https://github.com/Jeozhao/Keras-FasterRCNN</a></p>
+<p>链接中也有相应指引教程，本文稍加补充并完善</p>
 <ul>
-<li><a href="#3.1">3.1 模型架构</a></li>
-<li><a href="#3.2">3.2 模型的优劣性</a></li>
-</ul>
-<p><a href="#4">4 Faster R-CNN</a></p>
+<li><p>docker环境</p>
 <ul>
-<li><a href="#4.1">4.1 模型架构</a></li>
-<li><a href="#4.2">4.2 模型的优劣性</a></li>
-</ul>
-<p><a href="#5">5 Yolo</a></p>
-<ul>
-<li><a href="#5.1">5.1 模型架构</a></li>
-<li><a href="#5.2">5.2 模型的优劣性</a></li>
-</ul>
-<p><a href="#6">6 SSD</a></p>
-<ul>
-<li><a href="#6.1">6.1 模型架构</a></li>
-<li><a href="#6.2">6.2 模型的优劣性</a></li>
-</ul>
-<h2 id="1-目标检测任务介绍"><a href="#1-目标检测任务介绍" class="headerlink" title="1 目标检测任务介绍 "></a><a id="1">1 目标检测任务介绍 </a></h2><p>目标检测（object detection）一般包含两个任务：</p>
-<ul>
-<li>目标识别：识别图像中物体的类别</li>
-<li>目标定位：确定图像中物体的位置，一般是由矩形框表示（x，y，w，h），（x，y）表示坐标，（w，h）表示大小</li>
-</ul>
-<h2 id="2-R-CNN"><a href="#2-R-CNN" class="headerlink" title="2 R-CNN"></a><a id="2">2 R-CNN</a></h2><p>论文连接：<a href="https://arxiv.org/pdf/1311.2524.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1311.2524.pdf</a></p>
-<h3 id="2-1-模型架构"><a href="#2-1-模型架构" class="headerlink" title="2.1 模型架构"></a><a id="2.1">2.1 模型架构</a></h3><p><strong>见图</strong></p>
-<p><img src="/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/R-CNN.png" alt="R-CNN架构图"></p>
-<p>整个流程以测试阶段为主，训练阶段所需的工作会额外说明。</p>
-<ul>
-<li><p>提取候选框（Selective Search）</p>
+<li><p>Python2</p>
 </li>
-<li><p>输入一张图片，使用Selective search方法自底向上的从图片中提取出约2k个候选框</p>
-</li>
-<li><p>提取候选区域的特征（CNN）</p>
+<li><p>拉取镜像：<figure class="highlight docker"><figcaption><span>pull tensorflow/tensorflow:1.12.0```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- 下载代码库</span><br><span class="line">  - 该代码库并没有训练好的权重。而要得到效果良好的结果，需要进行多天的训练。</span><br><span class="line">  - 为简便起见，本文将对代码进行部分修改，执行短期训练产生一个权重参数文件，用于测试</span><br><span class="line">    - 对存在非ASCII码的文件，在文件头添加编码声明：```<span class="comment">#coding=utf-8</span></span><br></pre></td></tr></table></figure></p>
 <ul>
-<li>Warp操作：将候选框缩放为固定大小，227x227</li>
-<li>利用CNN从每个候选区域中提取出固定长度的特征向量，4096维，用于分类</li>
+<li>在配置问卷config.py中，将num_roi改为10</li>
+<li>在train_frcnn中，将num_epoch的default修改为10，epoch_length修改为10（以上数值可自行更改，仅供体验）</li>
 </ul>
 </li>
-</ul>
+<li><p>将代码库复制到docker中</p>
 <ul>
-<li>训练<ul>
-<li>CNN首先在一个大型数据集（ILSVRC2012）上进行预训练</li>
-<li>针对候选区域图像进行微调</li>
-</ul>
+<li><figure class="highlight docker"><figcaption><span>cp</span><a href="/path/to/yourdir">contianer_id:/path/to/dockerdir```</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  - 下载训练数据集Pascal VOC并复制到docker容器中相应位置</span><br><span class="line">    - http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-<span class="number">2012</span>.tar</span><br><span class="line">- 训练与测试</span><br><span class="line">  - ```python train_frcnn.py -p /path/to/pascalvoc/</span><br></pre></td></tr></table></figure>
+</li>
+<li><figure class="highlight python"><figcaption><span>test_frcnn.py -p</span><a href="/path/to/test_data/```">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">  - 仅使用原库中提供的测试结果作为对比</span><br><span class="line"></span><br><span class="line"><span class="comment">### 2 Yolo模型的使用</span></span><br><span class="line"></span><br><span class="line">*Github代码链接：https://github.com/qqwweee/keras-yolo3*</span><br><span class="line"></span><br><span class="line">- docker环境</span><br><span class="line"></span><br><span class="line">  - Python <span class="number">3.5</span><span class="number">.2</span>、Keras <span class="number">2.1</span><span class="number">.5</span>、tensorflow <span class="number">1.6</span><span class="number">.0</span></span><br><span class="line">  - 拉取镜像：```docker pull tensorflow/tensorflow:<span class="number">1.6</span><span class="number">.0</span>-py</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<ul>
-<li><p>SVM分类器（二分类）</p>
-<ul>
-<li>使用SVM分类器，对每个提取出来的特征向量是否属于每个类别（不同的SVM分类器）进行评分。</li>
-<li>非极大值抑制：对于评分结果，计算候选区域之间的IoU（Intersection over Union），若两个候选区域之间的IoU大于某个阈值，则丢弃其中得分较低的候选区域。</li>
-<li>最终得出R-CNN预测的候选区域位置及其类别</li>
-</ul>
 </li>
-</ul>
-<ul>
-<li>训练<ul>
-<li>训练时采用某个IoU阈值，作为判断区域预测准确性的标准</li>
-<li>训练时是逐个类别对SVM进行优化的</li>
-</ul>
+<li><p>创建容器并进入，安装Keras：<figure class="highlight plain"><figcaption><span>install Keras</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 下载与运行</span><br><span class="line"></span><br><span class="line">  - 下载代码库：```git clone https://github.com/qqwweee/keras-yolo3</span><br></pre></td></tr></table></figure></p>
 </li>
-</ul>
-<p><strong>相关细节解释</strong></p>
-<ul>
-<li>Selective search是一种传统的region proposal method，但是R-CNN是区域候选方法无关的，采用其他方法同样适用，采用ss方便与其他同样采用ss的工作进行对比。</li>
-<li>提取区域特征的CNN是一个用于图像分类的网络，拥有固定的输入大小，227x227</li>
-<li>在实际计算中，CNN输出的是2000x4096矩阵，即 区域x特征向量维度。SVM权重矩阵是4096xN，N是类别数目。SVM输出2000xN矩阵，代表每个区域对应每个类别的评分。</li>
-<li>IoU：Intersection/Union：表示两个候选区域面积的交集/并集，用来衡量两个区域的重叠率。</li>
-<li>测试的评估标准：预测的候选区域与ground truth boxes之间的IoU大于某个阈值，并且类别准确，则视为预测正确</li>
-</ul>
-<h3 id="2-2-模型的优劣性"><a href="#2-2-模型的优劣性" class="headerlink" title="2.2 模型的优劣性"></a><a id="2.2">2.2 模型的优劣性</a></h3><ul>
-<li><p>优点</p>
-<ul>
-<li>用于提取区域特征的CNN是所有类别共享的：共享CNN，使得计算候选区域的特征所需的时间得以在所有类别之间均摊</li>
-<li>相比于以前的方法，特征向量相对是低维的，4k vs 360k</li>
-<li>易于扩展：R-CNN可以容易的扩展成识别更多类别的模型，并且不需要消耗太多的时间，当然这也是相对而言</li>
-</ul>
+<li><p>进入目录，下载权重：<figure class="highlight plain"><figcaption><span>https://pjreddie.com/media/files/yolov3.weights```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- 将模型转化为Keras模型：```python convert.py yolov3.cfg yolov3.weights model_data/yolo.h5</span><br></pre></td></tr></table></figure></p>
 </li>
-<li><p>缺点</p>
-<ul>
-<li><p>训练时消耗大量时间和计算空间。</p>
-<p>类别特定（class-specific）的计算量庞大：区域特征向量与SVM分类器之间的点积运算、非极大值抑制。所谓类别特定，是指不同类别之间的计算不能共享。</p>
+<li><p>在yolo_video.py中添加保存测试后的图片：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">  - 使用 1 中的图片，将其复制到images文件夹中，用于测试</span><br><span class="line">  - 最后运行：```python yolo_video.py --image```，在images中查看结果</span><br><span class="line"></span><br><span class="line">- *注*</span><br><span class="line"></span><br><span class="line">  *可以直接使用darknet进行检测*</span><br><span class="line"></span><br><span class="line">  链接：https://pjreddie.com/darknet/yolo/</span><br><span class="line"></span><br><span class="line">### 3 SSD模型的使用</span><br><span class="line"></span><br><span class="line">Github代码链接：https://github.com/rykov8/ssd_keras</span><br><span class="line"></span><br><span class="line">- docker环境</span><br><span class="line">  - TensorFlow 1.0.0，OpenCV 3.1.0-dev，Keras 1.2.2</span><br><span class="line">  - 拉取镜像：```docker pull tensorflow/tensorflow:1.0.0</span><br></pre></td></tr></table></figure></p>
 </li>
-<li><p>训练时多阶段的。微调CNN、训练SVM、训练regressor（回归器）</p>
+<li><p>创建容器：<figure class="highlight docker"><figcaption><span>run -it -p 8888:8888 tensorflow/tensorflow:1.0.0</span><a href="/bin/bash```">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">  - 进入容器，安装opencv：pip install opencv-python==<span class="number">3.1</span>.<span class="number">0</span>-dev</span><br><span class="line">- 下载与运行</span><br><span class="line">  - 下载代码库：```git clone https://github.com/rykov8/ssd_keras</span><br></pre></td></tr></table></figure></p>
 </li>
-<li><p>应用和测试时检测速度慢</p>
+<li><p>根据github提供的链接下载权重文件，并复制到容器中相应位置</p>
+</li>
+<li><p>将 1 中的测试图片复制到 ./pic 文件夹中，并将SSD.ipynb中的测试图片文件名进行修改，对应成测试图片</p>
+</li>
+<li><p>运行jupyter：<code>jupyter notebook</code>，在浏览器中打开<code>localhost:8888</code>，然后运行，得到结果</p>
 </li>
 </ul>
 </li>
 </ul>
-<h2 id="3-Fast-R-CNN"><a href="#3-Fast-R-CNN" class="headerlink" title="3 Fast R-CNN"></a><a id="3">3 Fast R-CNN</a></h2><p>论文链接：<a href="https://arxiv.org/pdf/1504.08083.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1504.08083.pdf</a></p>
-<h3 id="3-1-模型架构"><a href="#3-1-模型架构" class="headerlink" title="3.1 模型架构"></a><a id="3.1">3.1 模型架构</a></h3><p><strong>论文图</strong></p>
-<p><img src="/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Fast_R-CNN.png" alt="Fast R-CNN架构图"></p>
-<p><em>上图没有问题，但是有点难以理解</em></p>
-<p><em>结合以下图架构进行描述</em></p>
-<p><img src="/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Fast_R-CNN2.png" alt="Fast R-CNN架构图2"></p>
+<h3 id="4-三个模型的测试效果对比"><a href="#4-三个模型的测试效果对比" class="headerlink" title="4 三个模型的测试效果对比"></a>4 三个模型的测试效果对比</h3><p><img src="/2019/07/06/object-detection-practice-tutorial/MyHexo/source/_posts/object_detection_practice_tutorial/cat.png" alt="cat"></p>
+<p><img src="/2019/07/06/object-detection-practice-tutorial/MyHexo/source/_posts/object_detection_practice_tutorial/car.png" alt="car"></p>
+<p><img src="/2019/07/06/object-detection-practice-tutorial/MyHexo/source/_posts/object_detection_practice_tutorial/person.png" alt="person"></p>
+<p><em>左起：faster r-cnn、yolo(v3)、ssd</em></p>
+<p><em>注意有些包围框的线不在图像中并没有画出来</em></p>
 <ul>
-<li>从图片中使用Selective search生成候选区域，由四元元组表示</li>
-<li>将图片输入全卷积网络，生成整体图片的特征图</li>
-<li>由区域位置计算出区域在整体特征图中对应的矩形窗口，即为RoI</li>
-<li>RoI Pooling层+FC层：每个RoI输出固定大小的特征向量，用于分类与回归</li>
-<li>特征向量通过两路并列的分支<ul>
-<li>FC+softmax：输出分类概率，该区域属于每个分类的概率，K+1个值，将背景也视为一个类别</li>
-<li>FC+bbox 回归层：输出每个类别的b-box的回归偏移量（相对原始区域包围框），4K，每个类别的bbox由四个实数表示</li>
-</ul>
-</li>
-</ul>
-<p><strong>RoI池化层</strong></p>
-<ul>
-<li>RoI池化层使用最大池化将RoI的特征图转化为一个固定大小的特征图，HxW，论文中为7x7<ul>
-<li>输入：RoI</li>
-<li>将hxw的RoI窗口划分为HxW的网格，其中每个网格（子窗口）大小为h/H x w/W</li>
-<li>将每个网格中的值使用最大池化得出每个网格的最大值（一个值），HxW个网格的输出值组成HxW的特征图</li>
-<li>输出：大小为HxW的特征图</li>
-</ul>
-</li>
-</ul>
-<p><strong>相关细节解释</strong></p>
-<ul>
-<li>全卷积网络：指只有卷积层和池化层，不包含全连接层</li>
-<li>RoI：Region of Interest，论文中是指全卷积网络的输出特征图中的一个矩形窗口，由（r，c，h，w）元组定义，对应Region Proposal</li>
-</ul>
-<p><strong>模型训练</strong></p>
-<ul>
-<li>FCN部分使用预训练网络进行初始化</li>
-<li>微调<ul>
-<li>Mini-batch从N张图片中选取各R/N个RoIs，替代从不同的R张图片中选取一个RoI。同一张图片的RoIs能够共享在FCN阶段的计算</li>
-<li>Fast R-CNN使用单阶段同时训练分类器和回归器</li>
-<li>多任务的损失函数。分类和回归两者结合，实验时采用的权重比例为1:1</li>
-<li>SGD的超参数。分类和回归两个分支中FC使用高斯分布初始化</li>
-</ul>
-</li>
-</ul>
-<h3 id="3-2-模型的优劣性"><a href="#3-2-模型的优劣性" class="headerlink" title="3.2 模型的优劣性"></a><a id="3.2">3.2 模型的优劣性</a></h3><ul>
-<li>优点<ul>
-<li>单阶段，端到端的训练与测试。</li>
-<li>多任务的损失函数提高了准确率</li>
-<li>共享同一张图片的不同候选框的特征向量的计算</li>
-</ul>
-</li>
-<li>缺点<ul>
-<li>生成候选框仍使用ss，速度慢</li>
-</ul>
-</li>
-</ul>
-<h2 id="4-Faster-R-CNN"><a href="#4-Faster-R-CNN" class="headerlink" title="4 Faster R-CNN"></a><a id="4">4 Faster R-CNN</a></h2><p>论文链接：<a href="https://arxiv.org/pdf/1506.01497.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1506.01497.pdf</a></p>
-<h3 id="4-1-模型架构"><a href="#4-1-模型架构" class="headerlink" title="4.1 模型架构"></a><a id="4.1">4.1 模型架构</a></h3><p><strong>见图</strong></p>
-<p><img src="/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Faster_R-CNN.png" alt="Faster R-CNN架构图"></p>
-<p><em>Faster R-CNN主要由两个模块组成</em></p>
-<ul>
-<li>RPN（Region Proposal Network）：一个深度全卷积网络，用来提议候选区域，替代之前的ss</li>
-<li>Fast R-CNN：使用RPN的候选区域进行检测</li>
-</ul>
-<p><strong>算法流程</strong></p>
-<ul>
-<li>输入图片</li>
-<li>使用CNN提取图片的整体特征图（这部分CNN是RPN和Fast R-CNN共用的）</li>
-<li>RPN从特征图中提取出候选区域(RP)</li>
-<li>RP送入Fast R-CNN进行分类与回归（与Fast R-CNN相同）<ul>
-<li>使用RoI池化层+FC，从RP提取出特征向量</li>
-<li>两路分支进行分类与回归</li>
-</ul>
-</li>
-</ul>
-<p><strong>RPN(Region Proposal Network)</strong></p>
-<p><em>RPN是一个全卷积网络</em></p>
-<p><em>见图</em></p>
-<p><img src="/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Faster_RPN.png" alt="RPN"></p>
-<p><em>流程</em></p>
-<ul>
-<li>在特征图上使用nxn的滑动窗口，将滑窗对应的部分特征图用过中间层（卷积层）映射为256d的特征向量</li>
-<li>使用特征向量进行分类与回归</li>
-</ul>
-<p><em>Anchor</em></p>
-<ul>
-<li>Anchor的含义本指滑窗的中心点（锚点），论文中也指：根据滑窗位置，在原图像中提出的候选区域。</li>
-<li>对于每个滑窗，滑窗中心在原图像中有对应的位置。根据不同的大小，不同的纵横比，可以预测不同的矩形，即多个候选区域，个数记为k。那么WxH的特征图，总共有WHk个anchor，用于回归。</li>
-</ul>
-<p><em>RPN的训练</em></p>
-<ul>
-<li>回归损失与分类损失结合</li>
-<li>回归损失由RPN提出的RP与Ground truth boxes之间的差异产生</li>
-</ul>
-<p><em>Faster R-CNN的训练（交替训练）</em></p>
-<ul>
-<li>由RPN的分类与回归损失，训练RPN</li>
-<li>固定RPN，由RPN提取的RP，训练Fast R-CNN</li>
-<li>用Fast R-CNN初始化RPN中 两者共用的卷积层</li>
-<li>迭代执行上述步骤，直到训练结束（测试结果没有明显提升时）</li>
-</ul>
-<h3 id="4-2-模型的优劣性"><a href="#4-2-模型的优劣性" class="headerlink" title="4.2 模型的优劣性"></a><a id="4.2">4.2 模型的优劣性</a></h3><ul>
-<li>优点<ul>
-<li>使用RPN提议候选区域，替代ss，加快速度</li>
-</ul>
-</li>
-<li>缺点<ul>
-<li>需要对两个网络交替训练，比较复杂</li>
-</ul>
-</li>
-</ul>
-<h2 id="5-Yolo"><a href="#5-Yolo" class="headerlink" title="5 Yolo"></a><a id="5">5 Yolo</a></h2><p>论文链接：<a href="https://arxiv.org/pdf/1506.02640.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1506.02640.pdf</a></p>
-<h3 id="5-1-模型架构"><a href="#5-1-模型架构" class="headerlink" title="5.1 模型架构"></a><a id="5.1">5.1 模型架构</a></h3><p><strong>流程图</strong></p>
-<p><img src="/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Yolo.png" alt="Yolo"></p>
-<p><strong>算法流程</strong></p>
-<ul>
-<li>输入图片</li>
-<li>将图片分割成SxS的网格，如果某个物体的中心位于某个网格内，那么该网格负责检测该物体</li>
-<li>使用CNN，对每个网格进行预测<ul>
-<li>预测B个包围盒的位置，并且给出这B个包围盒的置信度（confidence score）<ul>
-<li>confidence score：<img src="/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Yolo2.png" alt="Yolo2"></li>
-</ul>
-</li>
-<li>预测C个类别的条件概率：网格中有物体的条件下，该物体时特定类别的概率<ul>
-<li>特定类别的条件概率：<img src="/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Yolo3.png" alt="Yolo3"></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>这些预测输出将会编码为SxSx（B*5+C）的张量</li>
-<li>将包围盒的预测分数和网格的特定类别的条件概率相乘，得到包围盒中特定类别的概率<ul>
-<li>特定类别的概率：<img src="/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Yolo4.png" alt="Yolo4"></li>
-</ul>
-</li>
-<li>最后通过选取每个网格对应的所有包围盒中最大的类别概率，设定阈值，多个网格非极大值抑制等方法，选取最终的预测结果</li>
-</ul>
-<p><strong>相关细节</strong></p>
-<ul>
-<li>每个包围盒预测是五元组：x，y，w，h，confidence<ul>
-<li>（x，y）代表包围盒中心相对于网格边框的偏移，而非整体图片的偏移，这样才方便在一定范围内对权重参数进行限制</li>
-</ul>
-</li>
-<li>CNN的预测结果的张量为：SxSx（B*5+C）<ul>
-<li>针对每个网格，预测B个包围框，每个包围框五个参数，同时针对每个网格，预测C个类别条件概率</li>
-</ul>
-</li>
-</ul>
-<p><strong>架构图</strong></p>
-<p><img src="/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/Yolo5.png" alt="Yolo5"></p>
-<ul>
-<li>网络由24个卷积层和2个FC层组成。前者用来提取图片特征、后者用来分类与回归</li>
-<li>采用1x1卷积层进行降维</li>
-</ul>
-<h3 id="5-2-模型的优劣性"><a href="#5-2-模型的优劣性" class="headerlink" title="5.2 模型的优劣性"></a><a id="5.2">5.2 模型的优劣性</a></h3><ul>
-<li>优点：<ul>
-<li>跳出R-CNN系列的双任务（物体类别识别、物体位置确定）思维，实现单任务模型<ul>
-<li>不再使用ss或RPN等Region Proposal的方法，而是将位置信息和类别信息同时编码在网络输出中</li>
-<li>论文名字，You only look once的含义正源于此，只需要利用一个网络，在一张图上进行处理</li>
-</ul>
-</li>
-<li>在保证一定准确率的前提下，极大的提升了算法的速度，达到实时预测的速度要求</li>
-</ul>
-</li>
-<li>缺点<ul>
-<li>相比于Faster R-CNN等模型，由于不使用RPN等方法显示的提取候选框，位置精度降低了，检测准确率也有所降低，当然这是一个trade-off</li>
-</ul>
-</li>
-</ul>
-<h2 id="6-SSD"><a href="#6-SSD" class="headerlink" title="6 SSD"></a><a id="2">6 SSD</a></h2><p>论文链接：<a href="https://arxiv.org/pdf/1512.02325.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1512.02325.pdf</a></p>
-<h3 id="6-1-模型架构"><a href="#6-1-模型架构" class="headerlink" title="6.1 模型架构"></a><a id="6.1">6.1 模型架构</a></h3><p><strong>算法图示</strong></p>
-<p><img src="/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/SSD.png" alt="SSD"></p>
-<ul>
-<li>（a）SSD训练时只需要输入图片和Ground Truth boxes，不需要包围框的类别标签</li>
-<li>（b）和（c）是两个不同大小的特征图</li>
-</ul>
-<p><strong>算法流程</strong></p>
-<ul>
-<li>输入图片</li>
-<li>利用CNN产生不同规模的特征图</li>
-<li>在特征图中的每个位置，生成一些默认的boxes，具有不同大小和纵横比</li>
-<li>对每个默认的Box，使用CNN，预测位置偏移量和所有类别的confidence（见图）</li>
-<li>根据confidence大小，使用非极大值抑制，提出最后的预测结果</li>
-</ul>
-<p><strong>训练阶段</strong></p>
-<ul>
-<li>将默认box和GT boxes进行比较，设计定位损失函数</li>
-<li>使用定位损失和confidence损失结合</li>
-</ul>
-<p><strong>SSD和Yolo的架构图</strong></p>
-<p><img src="/2019/07/06/object-detection-practice-tutorial/Reins/Intel%E5%89%8D%E6%B2%BFAI%E7%AE%97%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5/object-detection/SSD2.png" alt="SSD2"></p>
-<p>SSD中，将Yolo的分类FC层去掉，换成Extra Feature Layers</p>
-<ul>
-<li>实现了多尺度特征图：利用不同的卷积层，得到不同尺度的特征图，实现多尺度检测</li>
-<li>利用卷积层来产生预测结果，而不是Yolo中的FC</li>
-<li>特征图上的默认Box，类似于Faster R-CNN的Anchor，不同的是，这里的默认box在不同尺度上检测</li>
-</ul>
-<h3 id="6-2-模型的优劣性"><a href="#6-2-模型的优劣性" class="headerlink" title="6.2 模型的优劣性"></a><a id="6.2">6.2 模型的优劣性</a></h3><ul>
-<li>优点<ul>
-<li>基本满足实时目标检测任务在速度和精度上的需求<ul>
-<li>检测精度几乎与Faster R-CNN相同</li>
-<li>检测速度超过Yolo</li>
-</ul>
-</li>
-<li>由于多尺度的检测网络，增加了多尺度的鲁棒性，当然这也是精度增加的重要原因</li>
-</ul>
-</li>
-<li>缺点<ul>
-<li>见近两年最新论文</li>
-</ul>
-</li>
+<li>faster r-cnn的包围框匹配程度以及置信度数值都明显低于yolo和ssd</li>
+<li>由于yolo在后期进行了优化，本文中使用的是yolo(v3)，有兴趣的同学可以自行了解</li>
+<li>yolo(v3)相比于ssd，包围框的匹配程度更加精准，同时也能识别更多的图像中物体，但正因此，在识别物体类别上也更容易出错</li>
 </ul>
 
       
