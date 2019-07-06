@@ -184,43 +184,70 @@
 <ul>
 <li><p>docker环境</p>
 <ul>
-<li><p>Python2</p>
-</li>
-<li><p>拉取镜像：<figure class="highlight docker"><figcaption><span>pull tensorflow/tensorflow:1.12.0```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 下载代码库</span><br><span class="line">  - 该代码库并没有训练好的权重。而要得到效果良好的结果，需要进行多天的训练。</span><br><span class="line">  - 为简便起见，本文将对代码进行部分修改，执行短期训练产生一个权重参数文件，用于测试</span><br><span class="line">    - 对存在非ASCII码的文件，在文件头添加编码声明：```<span class="comment">#coding=utf-8</span></span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>在配置问卷config.py中，将num_roi改为10</li>
-<li>在train_frcnn中，将num_epoch的default修改为10，epoch_length修改为10（以上数值可自行更改，仅供体验）</li>
+<li>Python2</li>
 </ul>
 </li>
-<li><p>将代码库复制到docker中</p>
-<ul>
-<li><figure class="highlight docker"><figcaption><span>cp</span><a href="/path/to/yourdir">contianer_id:/path/to/dockerdir```</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  - 下载训练数据集Pascal VOC并复制到docker容器中相应位置</span><br><span class="line">    - http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-<span class="number">2012</span>.tar</span><br><span class="line">- 训练与测试</span><br><span class="line">  - ```python train_frcnn.py -p /path/to/pascalvoc/</span><br></pre></td></tr></table></figure>
-
-
+<li><p>拉取镜像：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull tensorflow/tensorflow:1.12.0</span><br></pre></td></tr></table></figure>
 
 
 </li>
 </ul>
+<ul>
+<li><p>下载代码库</p>
+<ul>
+<li><p>该代码库并没有训练好的权重。而要得到效果良好的结果，需要进行多天的训练。</p>
+</li>
+<li><p>为简便起见，本文将对代码进行部分修改，执行短期训练产生一个权重参数文件，用于测试</p>
+<ul>
+<li>对存在非ASCII码的文件，在文件头添加编码声明：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  - 在配置问卷config.py中，将num_roi改为10</span><br><span class="line">  - 在train_frcnn中，将num_epoch的default修改为10，epoch_length修改为10（以上数值可自行更改，仅供体验）</span><br><span class="line">  </span><br><span class="line">- 将代码库复制到docker中</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>docker cp /path/to/yourdir  contianer_id:/path/to/dockerdir</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">  - 下载训练数据集Pascal VOC并复制到docker容器中相应位置</span><br><span class="line">    - http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar</span><br><span class="line">  </span><br><span class="line">- 训练与测试</span><br></pre></td></tr></table></figure>
+
+<p>python train_frcnn.py -p /path/to/pascalvoc/</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+
+<p>python test_frcnn.py -p /path/to/test_data/</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">    </span><br><span class="line">  - 仅使用原库中提供的测试结果作为对比</span><br><span class="line"></span><br><span class="line">### 2 Yolo模型的使用</span><br><span class="line"></span><br><span class="line">*Github代码链接：https://github.com/qqwweee/keras-yolo3*</span><br><span class="line"></span><br><span class="line">- docker环境</span><br><span class="line"></span><br><span class="line">  - Python 3.5.2、Keras 2.1.5、tensorflow 1.6.0</span><br><span class="line">  - 拉取镜像：</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>docker pull tensorflow/tensorflow:1.6.0-py</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 创建建容器并进入，安装Keras：</span><br></pre></td></tr></table></figure>
+
+<p>pip install Keras==2.1.5</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">- 下载与运行</span><br><span class="line"></span><br><span class="line">  - 下载代码库：</span><br></pre></td></tr></table></figure>
+
+<p>  git clone <a href="https://github.com/qqwweee/keras-yolo3" target="_blank" rel="noopener">https://github.com/qqwweee/keras-yolo3</a></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 进入目录，下载权重：</span><br></pre></td></tr></table></figure>
+
+<p>  wget <a href="https://pjreddie.com/media/files/yolov3.weights" target="_blank" rel="noopener">https://pjreddie.com/media/files/yolov3.weights</a></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 将模型转化为Keras模型：</span><br></pre></td></tr></table></figure>
+
+<p>  python convert.py yolov3.cfg yolov3.weights model_data/yolo.h5</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - 在yolo_video.py中添加保存测试后的图片：r_image.save(&apos;./images/save.jpg&apos;) (一次只能保存一张图片)</span><br><span class="line"></span><br><span class="line">  - 使用 1 中的图片，将其复制到images文件夹中，用于测试</span><br><span class="line">  - 最后运行：python yolo_video.py --image，在images中查看结果</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">- *注*</span><br><span class="line"></span><br><span class="line">  *可以直接使用darknet进行检测*</span><br><span class="line"></span><br><span class="line">  链接：https://pjreddie.com/darknet/yolo/</span><br><span class="line"></span><br><span class="line">### 3 SSD模型的使用</span><br><span class="line"></span><br><span class="line">Github代码链接：https://github.com/rykov8/ssd_keras</span><br><span class="line"></span><br><span class="line">- docker环境</span><br><span class="line">  - TensorFlow 1.0.0，OpenCV 3.1.0-dev，Keras 1.2.2</span><br><span class="line">  </span><br><span class="line">  - 拉取镜像：</span><br></pre></td></tr></table></figure>
+
+<p>  docker pull tensorflow/tensorflow:1.0.0</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 创建容器：</span><br></pre></td></tr></table></figure>
+
+<p>  docker run -it -p 8888:8888 tensorflow/tensorflow:1.0.0 /bin/bash<br>  ```</p>
+<ul>
+<li>进入容器，安装opencv：pip install opencv-python==3.1.0-dev</li>
+</ul>
+</li>
+<li><p>下载与运行</p>
+<ul>
+<li><p>下载代码库：git clone <a href="https://github.com/rykov8/ssd_keras" target="_blank" rel="noopener">https://github.com/rykov8/ssd_keras</a></p>
+</li>
+<li><p>根据github提供的链接下载权重文件，并复制到容器中相应位置</p>
+</li>
+<li><p>将 1 中的测试图片复制到 ./pic 文件夹中，并将SSD.ipynb中的测试图片文件名进行修改，对应成测试图片</p>
+</li>
+<li><p>运行jupyter：jupyter notebook，在浏览器中打开 localhost:8888，然后运行，得到结果</p>
 </li>
 </ul>
 </li>
-</ul>
-<pre><code>- <figure class="highlight python"><figcaption><span>test_frcnn.py -p</span><a href="/path/to/test_data/```">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">    </span><br><span class="line">    </span><br><span class="line">  - 仅使用原库中提供的测试结果作为对比</span><br><span class="line"></span><br><span class="line"><span class="comment">### 2 Yolo模型的使用</span></span><br><span class="line"></span><br><span class="line">*Github代码链接：https://github.com/qqwweee/keras-yolo3*</span><br><span class="line"></span><br><span class="line">- docker环境</span><br><span class="line"></span><br><span class="line">  - Python <span class="number">3.5</span><span class="number">.2</span>、Keras <span class="number">2.1</span><span class="number">.5</span>、tensorflow <span class="number">1.6</span><span class="number">.0</span></span><br><span class="line">  - 拉取镜像：```docker pull tensorflow/tensorflow:<span class="number">1.6</span><span class="number">.0</span>-py</span><br></pre></td></tr></table></figure></code></pre><ul>
-<li>创建容器并进入，安装Keras：<figure class="highlight plain"><figcaption><span>install Keras</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">- 下载与运行</span><br><span class="line"></span><br><span class="line">  - 下载代码库：```git clone https://github.com/qqwweee/keras-yolo3</span><br></pre></td></tr></table></figure></li>
-</ul>
-<ul>
-<li>进入目录，下载权重：<figure class="highlight plain"><figcaption><span>https://pjreddie.com/media/files/yolov3.weights```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- 将模型转化为Keras模型：```python convert.py yolov3.cfg yolov3.weights model_data/yolo.h5</span><br></pre></td></tr></table></figure></li>
-</ul>
-<ul>
-<li>在yolo_video.py中添加保存测试后的图片：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">  - 使用 1 中的图片，将其复制到images文件夹中，用于测试</span><br><span class="line">  - 最后运行：```python yolo_video.py --image```，在images中查看结果</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">- *注*</span><br><span class="line"></span><br><span class="line">  *可以直接使用darknet进行检测*</span><br><span class="line"></span><br><span class="line">  链接：https://pjreddie.com/darknet/yolo/</span><br><span class="line"></span><br><span class="line">### 3 SSD模型的使用</span><br><span class="line"></span><br><span class="line">Github代码链接：https://github.com/rykov8/ssd_keras</span><br><span class="line"></span><br><span class="line">- docker环境</span><br><span class="line">  - TensorFlow 1.0.0，OpenCV 3.1.0-dev，Keras 1.2.2</span><br><span class="line">  - 拉取镜像：```docker pull tensorflow/tensorflow:1.0.0</span><br></pre></td></tr></table></figure></li>
-</ul>
-<ul>
-<li>创建容器：<figure class="highlight docker"><figcaption><span>run -it -p 8888:8888 tensorflow/tensorflow:1.0.0</span><a href="/bin/bash```">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  - 进入容器，安装opencv：pip install opencv-python==<span class="number">3.1</span>.<span class="number">0</span>-dev</span><br><span class="line">- 下载与运行</span><br><span class="line">  - 下载代码库：```git clone https://github.com/rykov8/ssd_keras</span><br></pre></td></tr></table></figure></li>
-</ul>
-<ul>
-<li>根据github提供的链接下载权重文件，并复制到容器中相应位置</li>
-<li>将 1 中的测试图片复制到 ./pic 文件夹中，并将SSD.ipynb中的测试图片文件名进行修改，对应成测试图片</li>
-<li>运行jupyter：<code>jupyter notebook</code>，在浏览器中打开<code>localhost:8888</code>，然后运行，得到结果</li>
 </ul>
 <h3 id="4-三个模型的测试效果对比"><a href="#4-三个模型的测试效果对比" class="headerlink" title="4 三个模型的测试效果对比"></a>4 三个模型的测试效果对比</h3><p><img src="/2019/07/06/object-detection-practice-tutorial/cat.png" alt="cat"></p>
 <p><img src="/2019/07/06/object-detection-practice-tutorial/car.png" alt="car"></p>
